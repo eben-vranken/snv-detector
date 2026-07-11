@@ -1,5 +1,7 @@
 from argparse import ArgumentParser
 
+from src import parser
+
 def parse_args():
     parser = ArgumentParser()
 
@@ -17,4 +19,7 @@ def parse_args():
 if __name__ == "__main__":
     args = parse_args()
 
-    print(args.base, args.mutated)
+    base_sequence = parser.read_file(args.base)
+    mutated_sequence = parser.read_file(args.mutated)
+
+    print(base_sequence)
