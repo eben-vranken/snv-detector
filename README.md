@@ -1,1 +1,1 @@
-# SNP-Detector
+# SNV-Detector
