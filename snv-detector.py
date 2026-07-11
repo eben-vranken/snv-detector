@@ -22,4 +22,9 @@ if __name__ == "__main__":
     base_sequence = parser.read_file(args.base)
     mutated_sequence = parser.read_file(args.mutated)
 
-    print(base_sequence)
+    if len(base_sequence) != len(mutated_sequence):
+        print("Sequence lenghts do not match!")
+        exit(1)
+
+    scan_results = parser.scan(base_sequence, mutated_sequence)
+    print(scan_results)

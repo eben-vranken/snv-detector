@@ -6,3 +6,15 @@ def read_file(file_path):
                 sequence += line.strip()
 
     return sequence
+
+def scan(base, mutation):
+    changes = {}
+    
+    for i, _ in enumerate(base):
+        if base[i] != mutation[i]:
+            changes[i] = {
+                "base": base[i],
+                "mutation": mutation[i]
+            }
+
+    return changes
