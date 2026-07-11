@@ -27,4 +27,8 @@ if __name__ == "__main__":
         exit(1)
 
     scan_results = parser.scan(base_sequence, mutated_sequence)
-    print(scan_results)
+
+    print(f"{'Position':<10}{'Ref':<6}{'Mut':<6}")
+    print("-" * 22)
+    for pos, change in scan_results.items():
+        print(f"{pos:<10}{change['base']:<6}{change['mutation']:<6}")

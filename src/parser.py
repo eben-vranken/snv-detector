@@ -9,10 +9,10 @@ def read_file(file_path):
 
 def scan(base, mutation):
     changes = {}
-    
+
     for i, _ in enumerate(base):
         if base[i] != mutation[i]:
-            changes[i] = {
+            changes[i + 1] = {
                 "base": base[i],
                 "mutation": mutation[i]
             }
